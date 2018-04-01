@@ -1,0 +1,39 @@
+------
+basic operations
+------
+
+1 import an env
+
+2 env fileds
+env.nS
+env.nA
+env.P[s][a] # env mechanics
+
+loop through all state:
+	for s in range(env.nS):
+	#index by s
+
+
+3 take an action: look up next state in P
+prob, next_state,reward, done=env.P[s][a]
+
+4 policy represnetation: a table
+[S,A]
+
+5 following a policy
+for action,action_prob in enumarate(policy[s]):
+
+6 value function representation: a vector	
+V=np.zeros(env.nS)
+
+7 take value of a state
+V[state]
+
+
+------------------
+policy evluation using dp
+-------------------
+goal: try to compute value function by following the policy
+algorithm:
+do util unchanged(set delta)
+	for each state, compute full backup, that is , follow every action in the policy, calculate expecte value of the next states

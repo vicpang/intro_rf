@@ -1,0 +1,9 @@
+# import and init an env
+env.make()
+
+# simulate episode
+for i_eposide in range(100):
+
+#sample and take actions in action space
+obs,reward,done,info=env.step()
+env.action_space.sample()
